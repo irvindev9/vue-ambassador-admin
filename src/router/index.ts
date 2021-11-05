@@ -3,6 +3,10 @@ import VueRouter, { RouteConfig } from "vue-router";
 import Layout from "@/views/Layout.vue";
 import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
+import axios from "axios";
+
+axios.defaults.baseURL = "http://localhost:8000/api/admin/";
+axios.defaults.withCredentials = true;
 
 Vue.use(VueRouter);
 
