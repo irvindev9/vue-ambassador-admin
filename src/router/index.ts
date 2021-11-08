@@ -12,20 +12,20 @@ axios.defaults.withCredentials = true;
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
-  { 
+  {
     path: "",
     component: Layout,
     children: [
       {
         path: "",
-        redirect: "/users"
+        redirect: "/users",
       },
       {
         path: "/users",
         component: Users,
-      }
-    ]
-   },
+      },
+    ],
+  },
   { path: "/login", component: Login },
   { path: "/register", component: Register },
 ];

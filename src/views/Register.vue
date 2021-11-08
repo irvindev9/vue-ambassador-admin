@@ -99,8 +99,8 @@ export default {
       });
 
       await this.$router.push("/login");
-    }
-  }
+    },
+  },
 };
 </script>
 

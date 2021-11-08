@@ -15,26 +15,26 @@
 </template>
 
 <script>
-import Navbar from "@/components/Nav.vue"
-import Menu from "@/components/Menu.vue"
+import Navbar from "@/components/Nav.vue";
+import Menu from "@/components/Menu.vue";
 // import Users from "./Users.vue"
 import axios from "axios";
 import { User } from "@/models/user";
 
 export default {
   name: "Layout",
-  data(){
+  data() {
     return {
       user: new User(),
-    }
+    };
   },
   components: {
     Navbar,
     Menu,
     // Users
-  }, 
-  async mounted(){
-    try{
+  },
+  async mounted() {
+    try {
       const { data } = await axios.get("user");
 
       this.user = data;
@@ -42,7 +42,6 @@ export default {
       console.log(e);
       await this.$router.push("/login");
     }
-    
-  }
-}
+  },
+};
 </script>

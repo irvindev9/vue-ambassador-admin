@@ -53,15 +53,15 @@ export default {
     };
   },
   methods: {
-    async submit(){
+    async submit() {
       await axios.post("login", {
         email: this.email,
         password: this.password,
       });
 
       await this.$router.push("/");
-    }
-  }
+    },
+  },
 };
 </script>
 
